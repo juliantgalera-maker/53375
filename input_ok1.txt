@@ -1,0 +1,5 @@
+int calcularCubo(int base) {
+    temporal = base * base;
+    resultado = temporal * base;
+    return resultado;
+}

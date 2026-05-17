@@ -1,0 +1,5 @@
+int operacionInvalida(int a) {
+    x = a + 5;
+    return x;
+    y = x * 2;
+} 

@@ -1,0 +1,10 @@
+int calcularSuma(int a, int b) {
+    resultado = a + b;
+    return resultado;
+}
+
+float calcularPromedio(float n1, float n2, float n3) {
+    suma = n1 + n2 + n3;
+    promedio = suma / 3;
+    return promedio;
+}
