@@ -4,51 +4,56 @@ grammar Calculator;
  * 1. REGLAS SINTÁCTICAS (Parser Rules)
  */
 
-// <programa> ::= {<funcion>} 
 programa : funcion+ ;
 
-// <funcion> ::= <tipo> <identificador> '(' [<lista_parametros>] ')' '{' <bloque> '}'
-funcion : tipo ID '(' lista_parametros? ')' '{' bloque '}' ;
+funcion : tipo ID PAR_A lista_parametros? PAR_C LLAVE_A bloque LLAVE_C ;
 
-// <lista_parametros> ::= <parametro> { ',' <parametro> }
-lista_parametros : parametro (',' parametro)* ;
+lista_parametros : parametro (COMA parametro)* ;
 
-// <parametro> ::= <tipo> <identificador>
 parametro : tipo ID ;
 
-// <tipo> ::= 'int' | 'float' | 'char'
-tipo : 'int' | 'float' | 'char' ;
+tipo : INT | FLOAT | CHAR ;
 
-// <bloque> ::= {<instruccion>} <retorno>
 bloque : instruccion* retorno ;
 
-// <instruccion> ::= <identificador> '=' <expresion> ';'
-instruccion : ID '=' expresion ';' ;
+instruccion : ID ASIGNAR expresion POINT_COM ;
 
-// <retorno> ::= 'return' <expresion> ';'
-retorno : 'return' expresion ';' ;
+retorno : RETURN expresion POINT_COM ;
 
-// <expresion> ::= <termino> { ('+' | '-') <termino> }
-expresion : termino (('+' | '-') termino)* ;
+expresion : termino ((MAS | MENOS) termino)* ;
 
-// <termino> ::= <factor> { ('*' | '/') <factor> }
-termino : factor (('*' | '/') factor)* ;
+termino : factor ((MULT | DIV) factor)* ;
 
-// <factor> ::= '(' <expresion> ')' | <identificador> | <numero>
-factor : '(' expresion ')' 
+factor : PAR_A expresion PAR_C 
        | ID 
        | NUMERO ;
 
 
 /**
  * 2. REGLAS LÉXICAS (Lexer Rules)
- * Los nombres deben empezar con MAYÚSCULA.
  */
 
-// <identificador> ::= <letra> { <letra> | <digito> }
-ID : [a-zA-Z] [a-zA-Z0-9]* ;
+// Palabras clave (Keywords)
+INT    : 'int' ;
+FLOAT  : 'float' ;
+CHAR   : 'char' ;
+RETURN : 'return' ;
 
-// <numero> ::= <digito> { <digito> } [ '.' <digito> { <digito> } ]
+// Símbolos y Operadores
+PAR_A     : '(' ;
+PAR_C     : ')' ;
+LLAVE_A   : '{' ;
+LLAVE_C   : '}' ;
+COMA      : ',' ;
+POINT_COM : ';' ;
+ASIGNAR   : '=' ;
+MAS       : '+' ;
+MENOS     : '-' ;
+MULT      : '*' ;
+DIV       : '/' ;
+
+// Expresiones regulares
+ID     : [a-zA-Z] [a-zA-Z0-9]* ;
 NUMERO : [0-9]+ ('.' [0-9]+)? ;
 
 // Ignorar espacios, tabulaciones y saltos de línea

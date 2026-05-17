@@ -10,24 +10,24 @@ const serializedATN = [4,1,18,93,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,
 2,10,2,12,2,45,9,2,1,3,1,3,1,3,1,4,1,4,1,5,5,5,53,8,5,10,5,12,5,56,9,5,1,
 5,1,5,1,6,1,6,1,6,1,6,1,6,1,7,1,7,1,7,1,7,1,8,1,8,1,8,5,8,72,8,8,10,8,12,
 8,75,9,8,1,9,1,9,1,9,5,9,80,8,9,10,9,12,9,83,9,9,1,10,1,10,1,10,1,10,1,10,
-1,10,3,10,91,8,10,1,10,0,0,11,0,2,4,6,8,10,12,14,16,18,20,0,3,1,0,6,8,1,
+1,10,3,10,91,8,10,1,10,0,0,11,0,2,4,6,8,10,12,14,16,18,20,0,3,1,0,1,3,1,
 0,12,13,1,0,14,15,89,0,23,1,0,0,0,2,27,1,0,0,0,4,38,1,0,0,0,6,46,1,0,0,0,
 8,49,1,0,0,0,10,54,1,0,0,0,12,59,1,0,0,0,14,64,1,0,0,0,16,68,1,0,0,0,18,
 76,1,0,0,0,20,90,1,0,0,0,22,24,3,2,1,0,23,22,1,0,0,0,24,25,1,0,0,0,25,23,
 1,0,0,0,25,26,1,0,0,0,26,1,1,0,0,0,27,28,3,8,4,0,28,29,5,16,0,0,29,31,5,
-1,0,0,30,32,3,4,2,0,31,30,1,0,0,0,31,32,1,0,0,0,32,33,1,0,0,0,33,34,5,2,
-0,0,34,35,5,3,0,0,35,36,3,10,5,0,36,37,5,4,0,0,37,3,1,0,0,0,38,43,3,6,3,
-0,39,40,5,5,0,0,40,42,3,6,3,0,41,39,1,0,0,0,42,45,1,0,0,0,43,41,1,0,0,0,
+5,0,0,30,32,3,4,2,0,31,30,1,0,0,0,31,32,1,0,0,0,32,33,1,0,0,0,33,34,5,6,
+0,0,34,35,5,7,0,0,35,36,3,10,5,0,36,37,5,8,0,0,37,3,1,0,0,0,38,43,3,6,3,
+0,39,40,5,9,0,0,40,42,3,6,3,0,41,39,1,0,0,0,42,45,1,0,0,0,43,41,1,0,0,0,
 43,44,1,0,0,0,44,5,1,0,0,0,45,43,1,0,0,0,46,47,3,8,4,0,47,48,5,16,0,0,48,
 7,1,0,0,0,49,50,7,0,0,0,50,9,1,0,0,0,51,53,3,12,6,0,52,51,1,0,0,0,53,56,
 1,0,0,0,54,52,1,0,0,0,54,55,1,0,0,0,55,57,1,0,0,0,56,54,1,0,0,0,57,58,3,
-14,7,0,58,11,1,0,0,0,59,60,5,16,0,0,60,61,5,9,0,0,61,62,3,16,8,0,62,63,5,
-10,0,0,63,13,1,0,0,0,64,65,5,11,0,0,65,66,3,16,8,0,66,67,5,10,0,0,67,15,
+14,7,0,58,11,1,0,0,0,59,60,5,16,0,0,60,61,5,11,0,0,61,62,3,16,8,0,62,63,
+5,10,0,0,63,13,1,0,0,0,64,65,5,4,0,0,65,66,3,16,8,0,66,67,5,10,0,0,67,15,
 1,0,0,0,68,73,3,18,9,0,69,70,7,1,0,0,70,72,3,18,9,0,71,69,1,0,0,0,72,75,
 1,0,0,0,73,71,1,0,0,0,73,74,1,0,0,0,74,17,1,0,0,0,75,73,1,0,0,0,76,81,3,
 20,10,0,77,78,7,2,0,0,78,80,3,20,10,0,79,77,1,0,0,0,80,83,1,0,0,0,81,79,
-1,0,0,0,81,82,1,0,0,0,82,19,1,0,0,0,83,81,1,0,0,0,84,85,5,1,0,0,85,86,3,
-16,8,0,86,87,5,2,0,0,87,91,1,0,0,0,88,91,5,16,0,0,89,91,5,17,0,0,90,84,1,
+1,0,0,0,81,82,1,0,0,0,82,19,1,0,0,0,83,81,1,0,0,0,84,85,5,5,0,0,85,86,3,
+16,8,0,86,87,5,6,0,0,87,91,1,0,0,0,88,91,5,16,0,0,89,91,5,17,0,0,90,84,1,
 0,0,0,90,88,1,0,0,0,90,89,1,0,0,0,91,21,1,0,0,0,7,25,31,43,54,73,81,90];
 
 
@@ -40,12 +40,13 @@ const sharedContextCache = new antlr4.atn.PredictionContextCache();
 export default class CalculatorParser extends antlr4.Parser {
 
     static grammarFileName = "Calculator.g4";
-    static literalNames = [ null, "'('", "')'", "'{'", "'}'", "','", "'int'", 
-                            "'float'", "'char'", "'='", "';'", "'return'", 
+    static literalNames = [ null, "'int'", "'float'", "'char'", "'return'", 
+                            "'('", "')'", "'{'", "'}'", "','", "';'", "'='", 
                             "'+'", "'-'", "'*'", "'/'" ];
-    static symbolicNames = [ null, null, null, null, null, null, null, null, 
-                             null, null, null, null, null, null, null, null, 
-                             "ID", "NUMERO", "WS" ];
+    static symbolicNames = [ null, "INT", "FLOAT", "CHAR", "RETURN", "PAR_A", 
+                             "PAR_C", "LLAVE_A", "LLAVE_C", "COMA", "POINT_COM", 
+                             "ASIGNAR", "MAS", "MENOS", "MULT", "DIV", "ID", 
+                             "NUMERO", "WS" ];
     static ruleNames = [ "programa", "funcion", "lista_parametros", "parametro", 
                          "tipo", "bloque", "instruccion", "retorno", "expresion", 
                          "termino", "factor" ];
@@ -75,7 +76,7 @@ export default class CalculatorParser extends antlr4.Parser {
 	            this.state = 25; 
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
-	        } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 448) !== 0));
+	        } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 14) !== 0));
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -103,23 +104,23 @@ export default class CalculatorParser extends antlr4.Parser {
 	        this.state = 28;
 	        this.match(CalculatorParser.ID);
 	        this.state = 29;
-	        this.match(CalculatorParser.T__0);
+	        this.match(CalculatorParser.PAR_A);
 	        this.state = 31;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 448) !== 0)) {
+	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 14) !== 0)) {
 	            this.state = 30;
 	            this.lista_parametros();
 	        }
 
 	        this.state = 33;
-	        this.match(CalculatorParser.T__1);
+	        this.match(CalculatorParser.PAR_C);
 	        this.state = 34;
-	        this.match(CalculatorParser.T__2);
+	        this.match(CalculatorParser.LLAVE_A);
 	        this.state = 35;
 	        this.bloque();
 	        this.state = 36;
-	        this.match(CalculatorParser.T__3);
+	        this.match(CalculatorParser.LLAVE_C);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -147,9 +148,9 @@ export default class CalculatorParser extends antlr4.Parser {
 	        this.state = 43;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while(_la===5) {
+	        while(_la===9) {
 	            this.state = 39;
-	            this.match(CalculatorParser.T__4);
+	            this.match(CalculatorParser.COMA);
 	            this.state = 40;
 	            this.parametro();
 	            this.state = 45;
@@ -205,7 +206,7 @@ export default class CalculatorParser extends antlr4.Parser {
 	        this.enterOuterAlt(localctx, 1);
 	        this.state = 49;
 	        _la = this._input.LA(1);
-	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 448) !== 0))) {
+	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 14) !== 0))) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -270,11 +271,11 @@ export default class CalculatorParser extends antlr4.Parser {
 	        this.state = 59;
 	        this.match(CalculatorParser.ID);
 	        this.state = 60;
-	        this.match(CalculatorParser.T__8);
+	        this.match(CalculatorParser.ASIGNAR);
 	        this.state = 61;
 	        this.expresion();
 	        this.state = 62;
-	        this.match(CalculatorParser.T__9);
+	        this.match(CalculatorParser.POINT_COM);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -297,11 +298,11 @@ export default class CalculatorParser extends antlr4.Parser {
 	    try {
 	        this.enterOuterAlt(localctx, 1);
 	        this.state = 64;
-	        this.match(CalculatorParser.T__10);
+	        this.match(CalculatorParser.RETURN);
 	        this.state = 65;
 	        this.expresion();
 	        this.state = 66;
-	        this.match(CalculatorParser.T__9);
+	        this.match(CalculatorParser.POINT_COM);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -411,14 +412,14 @@ export default class CalculatorParser extends antlr4.Parser {
 	        this.state = 90;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
-	        case 1:
+	        case 5:
 	            this.enterOuterAlt(localctx, 1);
 	            this.state = 84;
-	            this.match(CalculatorParser.T__0);
+	            this.match(CalculatorParser.PAR_A);
 	            this.state = 85;
 	            this.expresion();
 	            this.state = 86;
-	            this.match(CalculatorParser.T__1);
+	            this.match(CalculatorParser.PAR_C);
 	            break;
 	        case 16:
 	            this.enterOuterAlt(localctx, 2);
@@ -451,21 +452,21 @@ export default class CalculatorParser extends antlr4.Parser {
 }
 
 CalculatorParser.EOF = antlr4.Token.EOF;
-CalculatorParser.T__0 = 1;
-CalculatorParser.T__1 = 2;
-CalculatorParser.T__2 = 3;
-CalculatorParser.T__3 = 4;
-CalculatorParser.T__4 = 5;
-CalculatorParser.T__5 = 6;
-CalculatorParser.T__6 = 7;
-CalculatorParser.T__7 = 8;
-CalculatorParser.T__8 = 9;
-CalculatorParser.T__9 = 10;
-CalculatorParser.T__10 = 11;
-CalculatorParser.T__11 = 12;
-CalculatorParser.T__12 = 13;
-CalculatorParser.T__13 = 14;
-CalculatorParser.T__14 = 15;
+CalculatorParser.INT = 1;
+CalculatorParser.FLOAT = 2;
+CalculatorParser.CHAR = 3;
+CalculatorParser.RETURN = 4;
+CalculatorParser.PAR_A = 5;
+CalculatorParser.PAR_C = 6;
+CalculatorParser.LLAVE_A = 7;
+CalculatorParser.LLAVE_C = 8;
+CalculatorParser.COMA = 9;
+CalculatorParser.POINT_COM = 10;
+CalculatorParser.ASIGNAR = 11;
+CalculatorParser.MAS = 12;
+CalculatorParser.MENOS = 13;
+CalculatorParser.MULT = 14;
+CalculatorParser.DIV = 15;
 CalculatorParser.ID = 16;
 CalculatorParser.NUMERO = 17;
 CalculatorParser.WS = 18;
@@ -554,8 +555,24 @@ class FuncionContext extends antlr4.ParserRuleContext {
 	    return this.getToken(CalculatorParser.ID, 0);
 	};
 
+	PAR_A() {
+	    return this.getToken(CalculatorParser.PAR_A, 0);
+	};
+
+	PAR_C() {
+	    return this.getToken(CalculatorParser.PAR_C, 0);
+	};
+
+	LLAVE_A() {
+	    return this.getToken(CalculatorParser.LLAVE_A, 0);
+	};
+
 	bloque() {
 	    return this.getTypedRuleContext(BloqueContext,0);
+	};
+
+	LLAVE_C() {
+	    return this.getToken(CalculatorParser.LLAVE_C, 0);
 	};
 
 	lista_parametros() {
@@ -611,6 +628,18 @@ class Lista_parametrosContext extends antlr4.ParserRuleContext {
 	        return this.getTypedRuleContext(ParametroContext,i);
 	    }
 	};
+
+	COMA = function(i) {
+		if(i===undefined) {
+			i = null;
+		}
+	    if(i===null) {
+	        return this.getTokens(CalculatorParser.COMA);
+	    } else {
+	        return this.getToken(CalculatorParser.COMA, i);
+	    }
+	};
+
 
 	enterRule(listener) {
 	    if(listener instanceof CalculatorListener ) {
@@ -698,6 +727,17 @@ class TipoContext extends antlr4.ParserRuleContext {
         this.ruleIndex = CalculatorParser.RULE_tipo;
     }
 
+	INT() {
+	    return this.getToken(CalculatorParser.INT, 0);
+	};
+
+	FLOAT() {
+	    return this.getToken(CalculatorParser.FLOAT, 0);
+	};
+
+	CHAR() {
+	    return this.getToken(CalculatorParser.CHAR, 0);
+	};
 
 	enterRule(listener) {
 	    if(listener instanceof CalculatorListener ) {
@@ -796,8 +836,16 @@ class InstruccionContext extends antlr4.ParserRuleContext {
 	    return this.getToken(CalculatorParser.ID, 0);
 	};
 
+	ASIGNAR() {
+	    return this.getToken(CalculatorParser.ASIGNAR, 0);
+	};
+
 	expresion() {
 	    return this.getTypedRuleContext(ExpresionContext,0);
+	};
+
+	POINT_COM() {
+	    return this.getToken(CalculatorParser.POINT_COM, 0);
 	};
 
 	enterRule(listener) {
@@ -839,8 +887,16 @@ class RetornoContext extends antlr4.ParserRuleContext {
         this.ruleIndex = CalculatorParser.RULE_retorno;
     }
 
+	RETURN() {
+	    return this.getToken(CalculatorParser.RETURN, 0);
+	};
+
 	expresion() {
 	    return this.getTypedRuleContext(ExpresionContext,0);
+	};
+
+	POINT_COM() {
+	    return this.getToken(CalculatorParser.POINT_COM, 0);
 	};
 
 	enterRule(listener) {
@@ -893,6 +949,30 @@ class ExpresionContext extends antlr4.ParserRuleContext {
 	    }
 	};
 
+	MAS = function(i) {
+		if(i===undefined) {
+			i = null;
+		}
+	    if(i===null) {
+	        return this.getTokens(CalculatorParser.MAS);
+	    } else {
+	        return this.getToken(CalculatorParser.MAS, i);
+	    }
+	};
+
+
+	MENOS = function(i) {
+		if(i===undefined) {
+			i = null;
+		}
+	    if(i===null) {
+	        return this.getTokens(CalculatorParser.MENOS);
+	    } else {
+	        return this.getToken(CalculatorParser.MENOS, i);
+	    }
+	};
+
+
 	enterRule(listener) {
 	    if(listener instanceof CalculatorListener ) {
 	        listener.enterExpresion(this);
@@ -943,6 +1023,30 @@ class TerminoContext extends antlr4.ParserRuleContext {
 	    }
 	};
 
+	MULT = function(i) {
+		if(i===undefined) {
+			i = null;
+		}
+	    if(i===null) {
+	        return this.getTokens(CalculatorParser.MULT);
+	    } else {
+	        return this.getToken(CalculatorParser.MULT, i);
+	    }
+	};
+
+
+	DIV = function(i) {
+		if(i===undefined) {
+			i = null;
+		}
+	    if(i===null) {
+	        return this.getTokens(CalculatorParser.DIV);
+	    } else {
+	        return this.getToken(CalculatorParser.DIV, i);
+	    }
+	};
+
+
 	enterRule(listener) {
 	    if(listener instanceof CalculatorListener ) {
 	        listener.enterTermino(this);
@@ -982,8 +1086,16 @@ class FactorContext extends antlr4.ParserRuleContext {
         this.ruleIndex = CalculatorParser.RULE_factor;
     }
 
+	PAR_A() {
+	    return this.getToken(CalculatorParser.PAR_A, 0);
+	};
+
 	expresion() {
 	    return this.getTypedRuleContext(ExpresionContext,0);
+	};
+
+	PAR_C() {
+	    return this.getToken(CalculatorParser.PAR_C, 0);
 	};
 
 	ID() {
